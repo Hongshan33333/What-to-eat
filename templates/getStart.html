@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Get Start</title>
+
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+      <!-- UIkit CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
+
+      <!-- UIkit JS -->
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
+      <style>
+
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            /* background-image: url(static/images/bg.jpg); */
+
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/images/bg.jpg);
+
+            position: relative;
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          .btn-get-started {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 28px 10px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+            border: 1px solid #fff;
+            color: #fff;
+          }
+
+          .btn-get-started:hover {
+            background: #fff;
+            color: #B54D24;
+            border: 1px solid #B54D24;
+          }
+
+          h2{
+            color: #fff;
+            font-family: "Lato", sans-serif;
+          }
+
+      </style>
+
+  </head>
+
+  <body>
+
+    <div class="bg uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+
+      <div>
+
+        <h2>What to Eat Today?</h2>
+
+      </div>
+
+      <div>
+        <!-- <h1>What To Eat Today?</h1><br> -->
+        <a href = '/goSelect' class="btn-get-started">Get Started</a>
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

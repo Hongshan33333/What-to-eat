@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step2</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
+
+    <style>
+
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .bg {
+          /* The image used */
+          /* background-image: url(static/images/bg.jpg); */
+
+          background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/images/bg.jpg);
+
+          position: relative;
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        h2{
+          color: #fff;
+          font-family: "Lato", sans-serif;
+        }
+
+        input[type=submit] {
+          width: 100%;
+          background-color: #B54D24;
+          color: white;
+          padding: 8px 10px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 0px;
+          cursor: pointer;
+        }
+
+        /* The container */
+        .container {
+
+          position: relative;
+          padding-left: 30px;
+          padding-right: 30px;
+
+          cursor: pointer;
+          font-size: 18px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        /* Hide the browser's default radio button */
+        .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        /* Create a custom radio button */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+
+        /* When the radio button is checked, add a background */
+        .container input:checked ~ .checkmark {
+          background-color: #B54D24;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        /* Show the indicator when checked */
+        .container input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+          top: 9px;
+        	left: 9px;
+        	width: 8px;
+        	height: 8px;
+        	border-radius: 50%;
+        	background: white;
+        }
+
+        td
+          {
+          	padding-bottom: 5px;
+          }
+
+          .button{
+              margin-right: 10px;
+              width: 100%;
+              background-color: #ccc;
+              color: white;
+              padding: 8px 30px;
+              border: none;
+              border-radius: 0px;
+              cursor: pointer;
+            }
+
+
+    </style>
+</head>
+<body>
+  <div class="bg uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+
+    <div>
+
+      <h2>What to Eat Today?</h2>
+
+    </div>
+
+
+    <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-2-3 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+            <h3 class="uk-card-title">What kind of cuisine do you want to eat?</h3>
+            <form action="/goSelect_Step2" name="cuisines">
+              <div class="uk-container-small">
+                <table>
+
+                  <tr>
+                    <td><label for="Japanese" class="container">Japanese<input type="radio" name="cuisine" id="Japanese"  value="Japanese"><span class="checkmark"></span></label></td>
+                    <td><label for="German" class="container">German<input type="radio" name="cuisine" id="German"  value="German"><span class="checkmark"></span></label></td>
+                    <td><label for="Mediterranean" class="container">Mediterranean<input type="radio" name="cuisine" id="Mediterranean"  value="Mediterranean"><span class="checkmark"></span></label></td>
+                    <td><label for="American" class="container">American<input type="radio" name="cuisine" id="American"  value="American"><span class="checkmark"></span></label></td>
+                    <td><label for="Mexican" class="container">Mexican<input type="radio" name="cuisine" id="Mexican"  value="Mexican"><span class="checkmark"></span></label></td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="British" class="container">British<input type="radio" name="cuisine" id="British"  value="British"><span class="checkmark"></span></label></td>
+                    <td><label for="Indian" class="container">Indian<input type="radio" name="cuisine" id="Indian"  value="Indian"><span class="checkmark"></span></label></td>
+                    <td><label for="Middle Eastern" class="container">Middle Eastern<input type="radio" name="cuisine" id="Middle Eastern"  value="Middle Eastern"><span class="checkmark"></span></label></td>
+                    <td><label for="Italian" class="container">Italian<input type="radio" name="cuisine" id="Italian"  value="Italian"><span class="checkmark"></span></label></td>
+                    <td><label for="Chinese" class="container">Chinese<input type="radio" name="cuisine" id="Chinese"  value="Chinese"><span class="checkmark"></span></label></td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="Spanish" class="container">Spanish<input type="radio" name="cuisine" id="Spanish"  value="Spanish"><span class="checkmark"></span></label></td>
+                    <td><label for="Eastern European" class="container">Eastern European<input type="radio" name="cuisine" id="Eastern European"  value="Eastern European"><span class="checkmark"></span></label></td>
+                    <td><label for="Jewish" class="container">Jewish<input type="radio" name="cuisine" id="Jewish"  value="Jewish"><span class="checkmark"></span></label></td>
+                    <td><label for="Thai" class="container">Thai<input type="radio" name="cuisine" id="Thai"  value="Thai"><span class="checkmark"></span></label></td>
+                    <td><label for="Korean" class="container">Korean<input type="radio" name="cuisine" id="Korean"  value="Korean"><span class="checkmark"></span></label></td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="French" class="container">French<input type="radio" name="cuisine" id="French"  value="French"><span class="checkmark"></span></label></td>
+                  </tr>
+                </table>
+
+
+
+
+
+                      <div class="uk-container-xsmall">
+                        <table class="uk-flex uk-flex-right">
+                          <tr>
+
+                            <td><a href="/return?pagename=goSelect_FirestStep" class="uk-button uk-button-default button">Return</a></td>
+                            <td><input type="submit" value="Next Question" class="uk-button uk-button-default">{{msg}}</td>
+
+                          </tr>
+                        </table>
+                      </div>
+
+
+              </div>
+
+            </form>
+
+            <!-- <hr>
+
+            <div>
+              <h3 class="uk-container-xsmall">Answer a question to get the recipe.</h3>
+            </div> -->
+    </div>
+
+  </div>
+</body>
+</html>

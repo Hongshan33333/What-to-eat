@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showResult</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            /* background-image: url(static/images/bg.jpg); */
+
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/images/bg.jpg);
+
+            position: relative;
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          h2{
+            color: #fff;
+            font-family: "Lato", sans-serif;
+          }
+
+          .button{
+              margin-top: 20px;
+              margin-left: 10px;
+              width: 100%;
+              background-color: #B54D24;
+              color: white;
+              padding: 8px 30px;
+
+              border: none;
+              border-radius: 0px;
+              cursor: pointer;
+            }
+
+            td
+              {
+              	height:50px;
+              	vertical-align: top;
+                padding: 10px;
+              }
+            table.link{
+              position:absolute;
+	             right:0px;
+            }
+            .vis{
+              height: 200px;
+            }
+            .taste{
+              background-color: #B54D24;
+            }
+    </style>
+</head>
+<body>
+  <div class="bg uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+    <div>
+
+      <h2>What to Eat Today?</h2>
+
+    </div>
+    <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-2-3 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+      <div>
+
+          <h3 class="uk-card-title">
+              <svg t="1621290409141" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1975" width="128" height="128">
+              <path d="M1016.323 512.422c0 278.14-225.495 503.637-503.636 503.637-278.157 0-503.652-225.497-503.652-503.637C9.036 234.25 234.531 8.771 512.688 8.771c278.14 0 503.635 225.479 503.635 503.651z" fill="#F5CB2B" p-id="1976"></path>
+              <path d="M245.057 492.895c-11.11 0-21.898-5.809-27.771-16.166-8.676-15.319-3.298-34.767 12.021-43.443l71.06-40.27-72.016-40.87c-15.319-8.691-20.681-28.141-11.989-43.46 8.676-15.303 28.125-20.682 43.444-11.989l120.9 68.61a31.854 31.854 0 0 1 16.151 27.725 31.866 31.866 0 0 1-16.166 27.726l-119.946 67.978a31.685 31.685 0 0 1-15.688 4.159zM781.258 492.527a31.298 31.298 0 0 1-15.797-4.27l-118.125-68.594a31.51 31.51 0 0 1 0.015-54.511l117.202-67.978c15.04-8.738 34.319-3.606 43.057 11.435 8.739 15.057 3.607 34.337-11.435 43.074l-70.259 40.747 71.184 41.333c15.058 8.737 20.158 28.018 11.436 43.074-5.857 10.064-16.429 15.69-27.278 15.69z" fill="#3E3417" p-id="1977"></path>
+              <path d="M332.191 737.039c-2.357 0-4.747-0.339-7.12-1.018-13.546-3.928-21.375-18.014-17.507-31.577 15.027-52.629 77.411-152.123 205.924-152.123 128.653 0 189.942 98.971 204.367 151.292 3.76 13.639-4.252 27.739-17.876 31.499-13.624 3.776-27.74-4.237-31.501-17.876-1.294-4.547-33.766-113.703-154.99-113.703-121.439 0-155.313 110.374-156.7 115.074-3.283 11.16-13.516 18.432-24.597 18.432z" fill="#3E3417" p-id="1978">
+            </path>
+            </svg>
+              {{title}}
+          </h3>
+
+
+          <div class="uk-container-xsmall">
+            <div class="uk-flex uk-flex-right">
+                <a href ='/tryAgain' class="button uk-button uk-button-default">
+                          try it Again
+                   </a>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

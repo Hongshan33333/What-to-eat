@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showResult</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            /* background-image: url(static/images/bg.jpg); */
+
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/images/bg.jpg);
+
+            position: relative;
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          h2{
+            color: #fff;
+            font-family: "Lato", sans-serif;
+          }
+
+          .button{
+              margin-top: 20px;
+              margin-left: 10px;
+              width: 100%;
+              background-color: #B54D24;
+              color: white;
+              padding: 8px 30px;
+              /* margin: 8px 0; */
+              border: none;
+              border-radius: 0px;
+              cursor: pointer;
+            }
+
+            td
+              {
+              	height:50px;
+              	vertical-align: top;
+                padding: 10px;
+              }
+            table.link{
+              position:absolute;
+	             right:0px;
+            }
+            .vis{
+              height: 200px;
+            }
+            .taste{
+              background-color: #B54D24;
+            }
+    </style>
+</head>
+<body>
+  <div class="bg uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+    <div>
+
+      <h2>What to Eat Today?</h2>
+
+    </div>
+    <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-2-3 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+      <div>
+        <h3 class="uk-card-title">{{title}}</h3>
+        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+          <div>
+              <div><img src={{img}} width="300" height="200"></div>
+              <div style="color: {{Calories_color}} ">Calories: {{Calories}} </div>
+              <div style="color: {{Fat_color}}">Fat: {{Fat}} g</div>
+              <div>Protein: {{Protein}} g</div>
+          </div>
+          <div>
+              <div class="vis"><span class="uk-badge taste">Taste</span> <br><br>{{taste}}</div>
+          </div>
+
+        </div>
+        
+
+        <table class="uk-flex uk-flex-right">
+            <tr>
+               <td><a href ='/tryAgain' class="button uk-button uk-button-default">
+                      try it Again
+               </a></td>
+
+
+               <td><a href ='/Next?Count={{Count}}' class="button uk-button uk-button-default">
+                    Next one
+               </a></td>
+            </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

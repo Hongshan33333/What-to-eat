@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Step3</title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.20/dist/js/uikit-icons.min.js"></script>
+    <style>
+
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .bg {
+          /* The image used */
+          /* background-image: url(static/images/bg.jpg); */
+
+          background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/images/bg.jpg);
+
+          position: relative;
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        h2{
+          color: #fff;
+          font-family: "Lato", sans-serif;
+        }
+
+        input[type=submit] {
+          width: 100%;
+          background-color: #B54D24;
+          color: white;
+          padding: 8px 10px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 0px;
+          cursor: pointer;
+        }
+
+        /* The container */
+        .container {
+
+          position: relative;
+          padding-left: 30px;
+          padding-right: 30px;
+
+          /* margin-top: 20px; */
+          /* margin-bottom: 20px; */
+          cursor: pointer;
+          font-size: 18px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        /* Hide the browser's default radio button */
+        .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        /* Create a custom radio button */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+
+        /* When the radio button is checked, add a background */
+        .container input:checked ~ .checkmark {
+          background-color: #B54D24;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        /* Show the indicator when checked */
+        .container input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+          top: 9px;
+        	left: 9px;
+        	width: 8px;
+        	height: 8px;
+        	border-radius: 50%;
+        	background: white;
+        }
+
+        td
+          {
+          	padding-bottom: 5px;
+          }
+
+          .button{
+              /* margin-top: 20px; */
+              margin-right: 10px;
+              width: 100%;
+              background-color: #ccc;
+              color: white;
+              padding: 8px 30px;
+              /* margin: 8px 0; */
+              border: none;
+              border-radius: 0px;
+              cursor: pointer;
+            }
+
+
+    </style>
+</head>
+
+<body>
+  <div class="bg uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+    <div>
+
+      <h2>What to Eat Today?</h2>
+
+    </div>
+
+
+      <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-2-3 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+          <h3 class="uk-card-title">What type of dish do you want to eat?</h3>
+          <form action="/goSelect_Step3" name="types">
+                <div class="uk-container-small">
+
+                      <table>
+
+                        <tr>
+                          <td><label for="main course" class="container">main course<input type="radio" name="type" id="main course"  value="main course"><span class="checkmark"></span></label></td>
+                          <td><label for="side dish" class="container">side dish<input type="radio" name="type" id="side dish"  value="side dish"><span class="checkmark"></span></label></td>
+                          <td><label for="dessert" class="container">dessert<input type="radio" name="type" id="dessert"  value="dessert"><span class="checkmark"></span></label></td>
+                          <td><label for="soup" class="container">soup<input type="radio" name="type" id="soup"  value="soup"><span class="checkmark"></span></label></td>
+                          <td><label for="salad" class="container">salad<input type="radio" name="type" id="salad"  value="salad"><span class="checkmark"></span></label></td>
+                        </tr>
+
+                        <tr>
+                          <td><label for="snack" class="container">snack<input type="radio" name="type" id="snack"  value="snack"><span class="checkmark"></span></label></td>
+                          <td><label for="appetizer" class="container">appetizer<input type="radio" name="type" id="appetizer"  value="appetizer"><span class="checkmark"></span></label></td>
+                          <td><label for="beverage" class="container">beverage<input type="radio" name="type" id="beverage"  value="beverage"><span class="checkmark"></span></label></td>
+                          <td><label for="drink" class="container">drink<input type="radio" name="type" id="drink"  value="drink"><span class="checkmark"></span></label></td>
+                          <td><label for="sauce" class="container">Tree Nut<input type="radio" name="type" id="sauce"  value="sauce"><span class="checkmark"></span></label></td>
+                        </tr>
+
+
+                      </table>
+
+
+                      <div class="uk-container-xsmall">
+                        <table class="uk-flex uk-flex-right">
+                          <tr>
+
+                            <td><a href="/return?pagename=goSelect_Step2" class="uk-button uk-button-default button">Return</a></td>
+                            <td><input type="submit" value="Next Question" class="uk-button uk-button-default">{{msg}}</td>
+
+                          </tr>
+                        </table>
+                      </div>
+
+                </div>
+
+          </form>
+      </div>
+</body>
+</html>
